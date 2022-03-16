@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>VLPR</title>
+    <link href="/2022/03/16/VLPR/"/>
+    <url>/2022/03/16/VLPR/</url>
+    
+    <content type="html"><![CDATA[<p>Artificial intelligence training choice to do the license plate recognition system, in this record the following ideas in the process of coding </p><p>I put the source files on Github and Gitee </p><p>Github: <a href="https://github.com/feeling-cold/opencv-VLPR">https://github.com/feeling-cold/opencv-VLPR</a> </p><p>Gitee: <a href="https://gitee.com/feeling-cool/VLPR">https://gitee.com/feeling-cool/VLPR</a> </p><p>This practical training is the most meaningful one in my college life, and it is also the first time for me to experience the power of artificial intelligence. License plate recognition is a pattern recognition technology which uses dynamic video or static image of vehicle to recognize license plate number and color automatically. Our program is mainly based on CNN and U-NET models. The program needs to achieve functions divided into image processing and video processing </p><p>Image processing: </p><p>The user selects the pictures in the folder for image processing, locates the license plate position in the image, and then identifies the license plate characters and outputs them. When the user needs to re-identify, he can click clear all. If you need to identify the video, you can click the jump button to process the video. </p><p>Video processing: </p><p>The user selects the video in the folder for single-frame analysis, divides the video into a single frame image for post-processing, locates the position of the license plate in the image, then identifies the license plate character and outputs it. After clicking video tracking, the license plate is selected on the video. </p><p>After the clear task, how to realize the license plate recognition system? For the task of license plate recognition, the overall idea is to use U-NET image segmentation to obtain binarization image, then use CV2 edge detection to obtain license plate region coordinates, and correct the license plate graphics, and use CNN convolutional neural network for multi-label license plate recognition. For the function of image segmentation, the original image is divided into two labels, one is the license plate area, one is the irrelevant background area. Through processing, the color data of the license plate area is 255, the irrelevant background area is 0, and the training label set of UNET is composed of the binary images of the labeled license plate area. The training photo set is a mutual match of the original picture. Unet finally trained through 1200 marked data sets to achieve the effect of vehicle positioning. For license plate recognition, want to realize the license plate recognition of the input picture, because the license plate is fixed length, is the problem of 7 label classification, each input picture has 7 labels, that is, each character of the license plate. The identification process is 7 times identification, using Adam optimizer and cross entropy function as loss. All the structures before the output of the model can be shared. Only 7 outputs need to be modified. 7 outputs correspond to 7 Losses, and the total loss is the sum of 7 Losses. The image processing and video processing are regarded as two separate modules. The image processing module calls the license plate location and license plate recognition functions of CNN and UNET after training, and completes the whole process from license plate location to license plate recognition by binding tkinter click events. For the video module, the use of video frame cutting processing, each frame image for separate positioning and recognition, and finally connected to the processed picture, to achieve the tracking function for the video license plate, the whole program function is completed. Of course, due to the problems of experimental equipment, I used the trained model to complete the practical training. Of course, if there is equipment in the future, I still hope to design the network and train myself. </p><p>Finally show the following renderings </p><img src="/2022/03/16/VLPR/1.png" class="" title="图片一"> <img src="/2022/03/16/VLPR/2.png" class="" title="图片二"> <img src="/2022/03/16/VLPR/3.png" class="" title="图片三"> <img src="/2022/03/16/VLPR/4.png" class="" title="图片四"> ]]></content>
+    
+    
+    <categories>
+      
+      <category>Deep learning ，Artificial intelligence ，License plate recognition</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>originate</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>android studio error Failed to find Build Tools revision 30.0.2</title>
     <link href="/2022/03/15/error/"/>
     <url>/2022/03/15/error/</url>
