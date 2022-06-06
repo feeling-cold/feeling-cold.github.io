@@ -7,16 +7,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="">
   <meta name="author" content="feeling-cold">
   <meta name="keywords" content="">
-  <meta name="description" content="Java curriculum design chose the student achievement management system, in this record to do their own curriculum design some ideas and problems. File source at: github：https:&#x2F;&#x2F;github.com&#x2F;feeling-cold">
+  
+    <meta name="description" content="Java curriculum design chose the student achievement management system, in this record to do their own curriculum design some ideas and problems. File source at: github：https:&#x2F;&#x2F;github.com&#x2F;feeling-cold">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java course design is based on C&#x2F;S end student score management system">
 <meta property="og:url" content="http://example.com/2021/07/02/Java-se/index.html">
@@ -24,61 +24,76 @@
 <meta property="og:description" content="Java curriculum design chose the student achievement management system, in this record to do their own curriculum design some ideas and problems. File source at: github：https:&#x2F;&#x2F;github.com&#x2F;feeling-cold">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-02T14:47:23.000Z">
-<meta property="article:modified_time" content="2022-03-16T15:04:16.799Z">
+<meta property="article:modified_time" content="2022-06-06T12:04:47.127Z">
 <meta property="article:author" content="feeling-cold">
 <meta property="article:tag" content="originate">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+  
   <title>Java course design is based on C/S end student score management system - feeling-cold</title>
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
-  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
 
-  
-    
-    
-      
-      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
-    
-  
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
-  
-    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
-  
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
 
 
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
 
 
 <link  rel="stylesheet" href="/css/main.css" />
 
-<!-- 自定义样式保持在最底部 -->
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"GrSPUShS3LLIYI0UPdhKEgrK-gzGzoHsz","app_key":"WKNaX2s1diATNfudTNOEwFJC","server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.1","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+
+  
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 
 <body>
-  <header style="height: 70vh;">
-    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>feeling-cold</strong>
+      <strong>cold</strong>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -157,6 +172,7 @@
               &nbsp;<i class="iconfont icon-search"></i>&nbsp;
             </a>
           </li>
+          
         
         
           <li class="nav-item" id="color-toggle-btn">
@@ -169,65 +185,69 @@
   </div>
 </nav>
 
-    <div class="banner" id="banner" parallax=true
-         style="background: url('/img/5.jpg') no-repeat center center;
-           background-size: cover;">
-      <div class="full-bg-img">
-        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Java course design is based on C/S end student score management system">
-              
-            </span>
-
-            
-              <div class="mt-3">
-  
-  
-    <span class="post-meta">
-      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-07-02 22:47" pubdate>
-        July 2, 2021 pm
-      </time>
-    </span>
-  
-</div>
-
-<div class="mt-1">
-  
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      22k 字
-    </span>
   
 
-  
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      68 分钟
-    </span>
-  
-
-  
-  
-    
-      <!-- LeanCloud 统计文章PV -->
-      <span id="leancloud-page-views-container" class="post-meta" style="display: none">
-        <i class="iconfont icon-eye" aria-hidden="true"></i>
-        <span id="leancloud-page-views"></span> 次
-      </span>
-    
-  
-</div>
-
-            
-          </div>
-
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/5.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Java course design is based on C/S end student score management system"></span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-07-02 22:47" pubdate>
+          July 2, 2021 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          23k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          191 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
       </div>
+
+      
     </div>
+  </div>
+</div>
+
+</div>
+
   </header>
 
   <main>
@@ -236,15 +256,20 @@
 
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
-    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
     <div class="col-lg-8 nopadding-x-md">
       <div class="container nopadding-x-md" id="board-ctn">
-        <div class="py-5" id="board">
+        <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
             <h1 style="display: none">Java course design is based on C/S end student score management system</h1>
             
             <div class="markdown-body">
+              
               <p>Java curriculum design chose the student achievement management system, in this record to do their own curriculum design some ideas and problems.</p>
 <p>File source at:</p>
 <p>github：<a target="_blank" rel="noopener" href="https://github.com/feeling-cold/java-information-system">https://github.com/feeling-cold/java-information-system</a></p>
@@ -254,562 +279,141 @@
 <p>Studentinfo1 studentInfo1 studentInfo1 (name char (10),no int, Python int, Java int,db int) Python scores, Java scores, database scores table.</p>
 <p>When the class starts, the first class will write the right class for database operations.</p>
 <p>Mysql &gt; insert into studentInfo1; mysql &gt; insert into studentInfo1; mysql &gt; insert into studentInfo1; Insert into studentinfo1 values (xx, xx, xx,…..) If you just insert one row of data, you can write the data you want to add to the value behind the parentheses, but we need many different rows of data, so we wrap this insert function into a function. When we insert, we call the function, pass different arguments to the function, and insert multiple different rows of data. Because I’m building studentInfo1, I’m using (name char (10),no int, Python int, Java int,db int), so I need to insert a value of that type. So the wrapper function is to set the format of the formal parameters to String A,int B,int C,int D,int E, and insert these parameters into the position of the placeholder in order, we have completed the most important part of the insert function, so that when the function is called, we only need to pass in different parameters, we can insert different data. Finally, upload the SQL statement to the database.</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-keyword">class</span> dbopra &#123;<br>public void insert(String a,<span class="hljs-built_in">int</span> b,<span class="hljs-built_in">int</span> c,<span class="hljs-built_in">int</span> d,<span class="hljs-built_in">int</span> e ) throws Exception&#123;<br>        <span class="hljs-comment">//Connection conn = null;</span><br>        PreparedStatement ps = null;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Class</span>.</span></span><span class="hljs-keyword">for</span><span class="hljs-constructor">Name(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>)</span>;<br>        String jdbc = <span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        Connection conn = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">DriverManager</span>.</span></span>get<span class="hljs-constructor">Connection(<span class="hljs-params">jdbc</span>, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>)</span>;<br>        String sql = <span class="hljs-string">&quot;INSERT INTO studentinfo1 (name,no,python,java,db) VALUES (?,?,?,?,? )&quot;</span>;<br>        ps = conn.prepare<span class="hljs-constructor">Statement(<span class="hljs-params">sql</span>)</span>;<br>        ps.set<span class="hljs-constructor">String(1, <span class="hljs-params">a</span>)</span>;<br>        ps.set<span class="hljs-constructor">Int(2, <span class="hljs-params">b</span>)</span>;<br>        ps.set<span class="hljs-constructor">Int(3, <span class="hljs-params">c</span>)</span>;<br>        ps.set<span class="hljs-constructor">Int(4, <span class="hljs-params">d</span>)</span>;<br>        ps.set<span class="hljs-constructor">Int(5, <span class="hljs-params">e</span>)</span>;<br>        <span class="hljs-built_in">int</span> insertCount = ps.execute<span class="hljs-constructor">Update()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">dbopra</span> &#123;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">insert</span><span class="hljs-params">(String a,<span class="hljs-type">int</span> b,<span class="hljs-type">int</span> c,<span class="hljs-type">int</span> d,<span class="hljs-type">int</span> e )</span> <span class="hljs-keyword">throws</span> Exception&#123;<br>        <span class="hljs-comment">//Connection conn = null;</span><br>        <span class="hljs-type">PreparedStatement</span> <span class="hljs-variable">ps</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        Class.forName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">jdbc</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        <span class="hljs-type">Connection</span> <span class="hljs-variable">conn</span> <span class="hljs-operator">=</span> DriverManager.getConnection(jdbc, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">sql</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;INSERT INTO studentinfo1 (name,no,python,java,db) VALUES (?,?,?,?,? )&quot;</span>;<br>        ps = conn.prepareStatement(sql);<br>        ps.setString(<span class="hljs-number">1</span>, a);<br>        ps.setInt(<span class="hljs-number">2</span>, b);<br>        ps.setInt(<span class="hljs-number">3</span>, c);<br>        ps.setInt(<span class="hljs-number">4</span>, d);<br>        ps.setInt(<span class="hljs-number">5</span>, e);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">insertCount</span> <span class="hljs-operator">=</span> ps.executeUpdate();<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
 <p>The second thing to write is to delete the data, this is also the same reason, of course, I am based on the student id delete information, so only set an int parameter on the line.</p>
-<pre><code>public void delete(int b) throws Exception&#123;
-        PreparedStatement ps = null;
-        Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
-        String jdbc = &quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;;
-        Connection conn = DriverManager.getConnection(jdbc, &quot;root&quot;, &quot;root&quot;);
-        String sql = &quot;delete from studentinfo1 where no = ?&quot;;
-        ps = conn.prepareStatement(sql);
-        ps.setInt(1,b);
-        int insertCount = ps.executeUpdate();
-        conn.close();&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">delete</span><span class="hljs-params">(<span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> Exception&#123;<br>        <span class="hljs-type">PreparedStatement</span> <span class="hljs-variable">ps</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        Class.forName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">jdbc</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        <span class="hljs-type">Connection</span> <span class="hljs-variable">conn</span> <span class="hljs-operator">=</span> DriverManager.getConnection(jdbc, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">sql</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;delete from studentinfo1 where no = ?&quot;</span>;<br>        ps = conn.prepareStatement(sql);<br>        ps.setInt(<span class="hljs-number">1</span>,b);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">insertCount</span> <span class="hljs-operator">=</span> ps.executeUpdate();<br>        conn.close();&#125;<br></code></pre></td></tr></table></figure>
 <p>The third to write is the query data, again the same reason, of course, I am still based on the student number query information, so parameter only set an int on the line. But before the data query and the difference is the information that we need to return the query, so you need to by the return value, we need to put the query after setting a good container, at the same time I hope on the basis of student id, can return to give me a name, three grades of data types, and get String function to get the value of the database are type String, So it’s just a good idea to put these values in an array, just do it, go through all the rows in the database, and when the student number is equal to the parameter that you passed in, put that row in the array, and then the query is done.</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">public String<span class="hljs-literal">[]</span> select(<span class="hljs-built_in">int</span> aa) throws Exception &#123;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Class</span>.</span></span><span class="hljs-keyword">for</span><span class="hljs-constructor">Name(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>)</span>;<br>        String jdbc=<span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        Connection conn=<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">DriverManager</span>.</span></span>get<span class="hljs-constructor">Connection(<span class="hljs-params">jdbc</span>, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>)</span>;<br>        Statement state=conn.create<span class="hljs-constructor">Statement()</span>;<br>        String sql=<span class="hljs-string">&quot;select * from studentinfo1&quot;</span>;<br>        ResultSet rs=state.execute<span class="hljs-constructor">Query(<span class="hljs-params">sql</span>)</span>;<br>        String<span class="hljs-literal">[]</span> arrey  = <span class="hljs-keyword">new</span> String<span class="hljs-literal">[<span class="hljs-number">5</span>]</span>;<br>        <span class="hljs-comment">//int i = 0;</span><br>        <span class="hljs-keyword">while</span>(rs.next<span class="hljs-literal">()</span>)&#123;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Integer</span>.</span></span>parse<span class="hljs-constructor">Int(<span class="hljs-params">rs</span>.<span class="hljs-params">getString</span>(2)</span> )== aa)<br>            &#123;<br>                arrey<span class="hljs-literal">[<span class="hljs-number">0</span>]</span> = rs.get<span class="hljs-constructor">String(1)</span>;<br>                arrey<span class="hljs-literal">[<span class="hljs-number">1</span>]</span> = rs.get<span class="hljs-constructor">String(2)</span>;<br>                arrey<span class="hljs-literal">[<span class="hljs-number">2</span>]</span> = rs.get<span class="hljs-constructor">String(3)</span>;<br>                arrey<span class="hljs-literal">[<span class="hljs-number">3</span>]</span> = rs.get<span class="hljs-constructor">String(4)</span>;<br>                arrey<span class="hljs-literal">[<span class="hljs-number">4</span>]</span> = rs.get<span class="hljs-constructor">String(5)</span>;<br>                <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">System</span>.</span></span>out.print(rs.get<span class="hljs-constructor">String(1)</span>+<span class="hljs-string">&quot; &quot;</span>+rs.get<span class="hljs-constructor">String(3)</span>+<span class="hljs-string">&quot; &quot;</span>+rs.get<span class="hljs-constructor">String(4)</span>+<span class="hljs-string">&quot; &quot;</span>+rs.get<span class="hljs-constructor">String(5)</span>);<br>                break;<br>            &#125;<br>        &#125;<br>        conn.close<span class="hljs-literal">()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> String[] select(<span class="hljs-type">int</span> aa) <span class="hljs-keyword">throws</span> Exception &#123;<br>        Class.forName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);<br>        String jdbc=<span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        Connection conn=DriverManager.getConnection(jdbc, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>);<br>        Statement state=conn.createStatement();<br>        String sql=<span class="hljs-string">&quot;select * from studentinfo1&quot;</span>;<br>        ResultSet rs=state.executeQuery(sql);<br>        String[] arrey  = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[<span class="hljs-number">5</span>];<br>        <span class="hljs-comment">//int i = 0;</span><br>        <span class="hljs-keyword">while</span>(rs.next())&#123;<br>            <span class="hljs-keyword">if</span> (Integer.parseInt(rs.getString(<span class="hljs-number">2</span>) )== aa)<br>            &#123;<br>                arrey[<span class="hljs-number">0</span>] = rs.getString(<span class="hljs-number">1</span>);<br>                arrey[<span class="hljs-number">1</span>] = rs.getString(<span class="hljs-number">2</span>);<br>                arrey[<span class="hljs-number">2</span>] = rs.getString(<span class="hljs-number">3</span>);<br>                arrey[<span class="hljs-number">3</span>] = rs.getString(<span class="hljs-number">4</span>);<br>                arrey[<span class="hljs-number">4</span>] = rs.getString(<span class="hljs-number">5</span>);<br>                System.out.print(rs.getString(<span class="hljs-number">1</span>)+<span class="hljs-string">&quot; &quot;</span>+rs.getString(<span class="hljs-number">3</span>)+<span class="hljs-string">&quot; &quot;</span>+rs.getString(<span class="hljs-number">4</span>)+<span class="hljs-string">&quot; &quot;</span>+rs.getString(<span class="hljs-number">5</span>));<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        conn.close();<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
 <p>Finally, to complete the last modification operation, which I still change the value of the data according to the student number, my first thought is to set the placeholder to “set? &#x3D;? Where no &#x3D;?” After the actual operation, the modification operation cannot be realized. After checking the data, I do not know why it cannot be operated, but WHEN I was debugging before, I used “set name &#x3D;? Where no &#x3D;?””Set python &#x3D;? Where no &#x3D;?” I then changed the idea to use an if statement, as shown below</p>
-<pre><code>public void update(String a,int b,int c) throws Exception&#123;
-        PreparedStatement ps = null;
-        Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
-        String jdbc = &quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;;
-        Connection conn = DriverManager.getConnection(jdbc, &quot;root&quot;, &quot;root&quot;);
-        if (a.equals(&quot;python&quot;))
-        &#123;
-            String sql = &quot;update studentinfo1 set python = ? where no = ? &quot;;
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, b);
-            ps.setInt(2, c);
-            int insertCount = ps.executeUpdate();
-        &#125;
-        else if(a.equals(&quot;java&quot;))
-        &#123;
-            String sql = &quot;update studentinfo1 set java = ? where no = ? &quot;;
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, b);
-            ps.setInt(2, c);
-            int insertCount = ps.executeUpdate();
-        &#125;
-        else if(a.equals(&quot;db&quot;))
-        &#123;
-            String sql = &quot;update studentinfo1 set db = ? where no = ? &quot;;
-            ps = conn.prepareStatement(sql);
-            ps.setInt(1, b);
-            ps.setInt(2, c);
-            int insertCount = ps.executeUpdate();
-        &#125;
-        conn.close();
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span><span class="hljs-params">(String a,<span class="hljs-type">int</span> b,<span class="hljs-type">int</span> c)</span> <span class="hljs-keyword">throws</span> Exception&#123;<br>        <span class="hljs-type">PreparedStatement</span> <span class="hljs-variable">ps</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        Class.forName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">jdbc</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        <span class="hljs-type">Connection</span> <span class="hljs-variable">conn</span> <span class="hljs-operator">=</span> DriverManager.getConnection(jdbc, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>);<br>        <span class="hljs-keyword">if</span> (a.equals(<span class="hljs-string">&quot;python&quot;</span>))<br>        &#123;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">sql</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;update studentinfo1 set python = ? where no = ? &quot;</span>;<br>            ps = conn.prepareStatement(sql);<br>            ps.setInt(<span class="hljs-number">1</span>, b);<br>            ps.setInt(<span class="hljs-number">2</span>, c);<br>            <span class="hljs-type">int</span> <span class="hljs-variable">insertCount</span> <span class="hljs-operator">=</span> ps.executeUpdate();<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a.equals(<span class="hljs-string">&quot;java&quot;</span>))<br>        &#123;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">sql</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;update studentinfo1 set java = ? where no = ? &quot;</span>;<br>            ps = conn.prepareStatement(sql);<br>            ps.setInt(<span class="hljs-number">1</span>, b);<br>            ps.setInt(<span class="hljs-number">2</span>, c);<br>            <span class="hljs-type">int</span> <span class="hljs-variable">insertCount</span> <span class="hljs-operator">=</span> ps.executeUpdate();<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a.equals(<span class="hljs-string">&quot;db&quot;</span>))<br>        &#123;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">sql</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;update studentinfo1 set db = ? where no = ? &quot;</span>;<br>            ps = conn.prepareStatement(sql);<br>            ps.setInt(<span class="hljs-number">1</span>, b);<br>            ps.setInt(<span class="hljs-number">2</span>, c);<br>            <span class="hljs-type">int</span> <span class="hljs-variable">insertCount</span> <span class="hljs-operator">=</span> ps.executeUpdate();<br>        &#125;<br>        conn.close();<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <p>This also indirectly implements the modification function, but requires an additional operation to change the name because of data type limitations.</p>
-<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">public void updatename(String a,String b,<span class="hljs-built_in">int</span> c) throws  Exception&#123;<br>        PreparedStatement ps = null;<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Class</span>.</span></span><span class="hljs-keyword">for</span><span class="hljs-constructor">Name(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>)</span>;<br>        String jdbc = <span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        Connection conn = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">DriverManager</span>.</span></span>get<span class="hljs-constructor">Connection(<span class="hljs-params">jdbc</span>, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>)</span>;<br>        <span class="hljs-keyword">if</span> (a.equals(<span class="hljs-string">&quot;姓名&quot;</span>))<br>        &#123;<br>            String sql = <span class="hljs-string">&quot;update studentinfo1 set name = ? where no = ? &quot;</span>;<br>            ps = conn.prepare<span class="hljs-constructor">Statement(<span class="hljs-params">sql</span>)</span>;<br>            ps.set<span class="hljs-constructor">String(1, <span class="hljs-params">b</span>)</span>;<br>            ps.set<span class="hljs-constructor">Int(2, <span class="hljs-params">c</span>)</span>;<br>            <span class="hljs-built_in">int</span> insertCount = ps.execute<span class="hljs-constructor">Update()</span>;<br>        &#125;<br>        conn.close<span class="hljs-literal">()</span>;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">updatename</span><span class="hljs-params">(String a,String b,<span class="hljs-type">int</span> c)</span> <span class="hljs-keyword">throws</span>  Exception&#123;<br>        <span class="hljs-type">PreparedStatement</span> <span class="hljs-variable">ps</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        Class.forName(<span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>);<br>        <span class="hljs-type">String</span> <span class="hljs-variable">jdbc</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf8&quot;</span>;<br>        <span class="hljs-type">Connection</span> <span class="hljs-variable">conn</span> <span class="hljs-operator">=</span> DriverManager.getConnection(jdbc, <span class="hljs-string">&quot;root&quot;</span>, <span class="hljs-string">&quot;root&quot;</span>);<br>        <span class="hljs-keyword">if</span> (a.equals(<span class="hljs-string">&quot;姓名&quot;</span>))<br>        &#123;<br>            <span class="hljs-type">String</span> <span class="hljs-variable">sql</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;update studentinfo1 set name = ? where no = ? &quot;</span>;<br>            ps = conn.prepareStatement(sql);<br>            ps.setString(<span class="hljs-number">1</span>, b);<br>            ps.setInt(<span class="hljs-number">2</span>, c);<br>            <span class="hljs-type">int</span> <span class="hljs-variable">insertCount</span> <span class="hljs-operator">=</span> ps.executeUpdate();<br>        &#125;<br>        conn.close();<br>    &#125;<br></code></pre></td></tr></table></figure>
 
 
 
 <p>The core of the database to add and delete check and change the operation is finished, then began to write the “front end”, first write the initial interface of each system ———— login interface.</p>
 <p>Import our most commonly used Swing components and AWT, and the writing of the GUI begins.</p>
 <p>Set the familiar components JTextfield, JButton, JLabel, JPasswordfield to fill it, first set the window center, and window ban maximization.</p>
-<pre><code>public class run extends JFrame&#123;
-    final JTextField t1 = new JTextField(20);
-    final JTextField t2 = new JTextField(20);
-    final JPasswordField t3 = new JPasswordField(20);
-    int input = 6;
-    public void init()&#123;
-        setSize(580,400);
-        setTitle(&quot;成绩管理系统&quot;);
-        setDefaultCloseOperation(3);
-        setResizable(false);
-        setLocationRelativeTo(null);
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">run</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">JFrame</span>&#123;<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JPasswordField</span> <span class="hljs-variable">t3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JPasswordField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-type">int</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">init</span><span class="hljs-params">()</span>&#123;<br>        setSize(<span class="hljs-number">580</span>,<span class="hljs-number">400</span>);<br>        setTitle(<span class="hljs-string">&quot;成绩管理系统&quot;</span>);<br>        setDefaultCloseOperation(<span class="hljs-number">3</span>);<br>        setResizable(<span class="hljs-literal">false</span>);<br>        setLocationRelativeTo(<span class="hljs-literal">null</span>);<br><br>        <span class="hljs-type">JLabel</span> <span class="hljs-variable">l1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;身份:&quot;</span>);<br>        <span class="hljs-comment">//t1 = new JTextField(20);</span><br><br>        <span class="hljs-type">JLabel</span> <span class="hljs-variable">l2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;姓名:&quot;</span>);<br>        <span class="hljs-comment">//JTextField t2 = new JTextField(20);</span><br><br>        <span class="hljs-type">JLabel</span> <span class="hljs-variable">l3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;密码:&quot;</span>);<br>        <span class="hljs-comment">//JTextField t3 = new JTextField(20);</span><br>        <span class="hljs-comment">//t3.setEchoChar(&#x27;*&#x27;);</span><br> <br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;确定&quot;</span>);<br></code></pre></td></tr></table></figure>
 
-        JLabel l1 = new JLabel(&quot;身份:&quot;);
-        //t1 = new JTextField(20);
 
-        JLabel l2 = new JLabel(&quot;姓名:&quot;);
-        //JTextField t2 = new JTextField(20);
+<p>Next, add event listeners for the buttons, and add event listeners for the register and login buttons. Click Register to store information in loguser. TXT. When storing loguser. TXT, I use the contents obtained from the text box in the form of “identity, username, password” to store the file line by line. Loguser. TXT file, judge whether the content of the text box is equal one by one, if you can find the same data, you can login successfully, login successfully can enter the corresponding interface, that is, instantiate classes such as student. Of course, in the design of the system, we default six login opportunities, if the login failed for six times, it will automatically exit the system.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><code class="hljs java">b1.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>                <span class="hljs-meta">@Override</span><br>                <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>                    <span class="hljs-keyword">try</span> &#123;<br>                        <span class="hljs-type">int</span> <span class="hljs-variable">aa</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span> ;<br>                        <span class="hljs-type">FileReader</span> <span class="hljs-variable">fr</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileReader</span>(<span class="hljs-string">&quot;E://loguser.txt&quot;</span>);<br>                        <span class="hljs-type">BufferedReader</span> <span class="hljs-variable">br</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedReader</span>(fr);<br>                        List&lt;String&gt;list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<br>                        <span class="hljs-type">String</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> br.readLine();<br>                        <span class="hljs-keyword">while</span> (a !=<span class="hljs-literal">null</span>)<br>                        &#123;<br>                            list.add(a);<br>                            a = br.readLine();<br>                        &#125;              <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; list.size(); i++) &#123;<br>                             <br>                        <span class="hljs-type">String</span> <span class="hljs-variable">el</span> <span class="hljs-operator">=</span> list.get(i);<br>                        <span class="hljs-comment">//System.out.print(el);</span><br>                        <span class="hljs-comment">//System.out.print(run.this.t2.getText()+String.valueOf(run.this.t3.getPassword()));</span><br>                        <span class="hljs-keyword">if</span> (el.equals(run.<span class="hljs-built_in">this</span>.t1.getText() + <span class="hljs-string">&quot;,&quot;</span> + run.<span class="hljs-built_in">this</span>.t2.getText() + <span class="hljs-string">&quot;,&quot;</span> + String.valueOf(run.<span class="hljs-built_in">this</span>.t3.getPassword())))<br>                        &#123;<br>                           <br>                            run.<span class="hljs-built_in">this</span>.dispose();<br>                         <br>                            <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;教师&quot;</span>)) &#123;<br> <br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">teacher</span>();<br> <br>                            &#125;<br>                            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;学生&quot;</span>)) &#123;<br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">student</span>();<br>                            &#125;<br>                            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;教师端管理员&quot;</span>))<br>                            &#123;<br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">adteacher</span>();<br>                            &#125;<br>                            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;学生端管理员&quot;</span>))<br>                            &#123;<br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">adstudent</span>();<br>                            &#125;<br>                            <span class="hljs-keyword">break</span>;<br>                        &#125;<br>                        <span class="hljs-keyword">if</span> (!(el.equals(run.<span class="hljs-built_in">this</span>.t1.getText() + <span class="hljs-string">&quot;,&quot;</span> + run.<span class="hljs-built_in">this</span>.t2.getText() + <span class="hljs-string">&quot;,&quot;</span> + String.valueOf(run.<span class="hljs-built_in">this</span>.t3.getPassword()))))<br>                        &#123;<br>                            aa += <span class="hljs-number">1</span>;<br>                          <br>                            <span class="hljs-keyword">if</span> (aa == list.size())<br>                            &#123;<br>                             <br>                                run.<span class="hljs-built_in">this</span>.input -= <span class="hljs-number">1</span>;<br>                                <span class="hljs-type">JDialog</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>();<br>                                d.setSize(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);<br>                                JOptionPane.showMessageDialog(d, <span class="hljs-string">&quot;登录失败！你还有&quot;</span>+input+<span class="hljs-string">&quot;次机会&quot;</span>, <span class="hljs-string">&quot;登陆提示&quot;</span>, ERROR_MESSAGE);<br>                            &#125;<br>                        &#125;<br> <br>                &#125;<br>                           <span class="hljs-keyword">if</span> (input == <span class="hljs-number">0</span>)<br>                    &#123;<br>                        run.<span class="hljs-built_in">this</span>.dispose();<br>                        System.exit(<span class="hljs-number">0</span>);<br>                    &#125;<br>                &#125;<span class="hljs-keyword">catch</span>(Exception e1) &#123;&#125;<br>            &#125;<br>        &#125;);<br><span class="hljs-type">JButton</span> <span class="hljs-variable">b2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;注册&quot;</span>);<br>        b2.setOpaque(<span class="hljs-literal">false</span>);<br>        b2.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>                <span class="hljs-keyword">try</span> &#123;<br>                    String[] arr =&#123;&#125;;<br>                    <span class="hljs-type">FileWriter</span> <span class="hljs-variable">fw</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileWriter</span>(<span class="hljs-string">&quot;E://loguser.txt&quot;</span>,<span class="hljs-literal">true</span>);<br>                    fw.write(run.<span class="hljs-built_in">this</span>.t1.getText());<br>                    fw.write(<span class="hljs-string">&quot;,&quot;</span>);<br>                    fw.write(run.<span class="hljs-built_in">this</span>.t2.getText());<br>                    fw.write(<span class="hljs-string">&quot;,&quot;</span>);<br>                    fw.write(run.<span class="hljs-built_in">this</span>.t3.getText());<br>                    fw.write(<span class="hljs-string">&quot;\r\n&quot;</span>);<br>                    fw.close();<br>                    <span class="hljs-type">JDialog</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>();<br>                    d.setSize(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);<br>                    JOptionPane.showMessageDialog(d, <span class="hljs-string">&quot;注册成功&quot;</span>, <span class="hljs-string">&quot;注册提示&quot;</span>,JOptionPane.PLAIN_MESSAGE);<br>                &#125;<span class="hljs-keyword">catch</span>(Exception e1)&#123;&#125;<br>            &#125;<br>        &#125;);<br></code></pre></td></tr></table></figure>
 
-        JLabel l3 = new JLabel(&quot;密码:&quot;);
-        //JTextField t3 = new JTextField(20);
-        //t3.setEchoChar(&#39;*&#39;);
- 
-    JButton b1 = new JButton(&quot;确定&quot;);
-</code></pre>
-<p>Next, add event listeners for the buttons, and add event listeners for the register and login buttons. Click Register to store information in loguser. TXT. When storing loguser. TXT, I use the contents obtained from the text box in the form of “identity, username, password” to store the file line by line. Loguser. TXT file, judge whether the content of the text box is equal one by one, if you can find the same data, you can login successfully, login successfully can enter the corresponding interface, that is, instantiate classes such as student. Of course, in the design of the system, we default six login opportunities, if the login failed for six times, it will automatically exit the system.<br>     b1.addActionListener(new ActionListener() {<br>                @Override<br>                public void actionPerformed(ActionEvent e) {<br>                    try {<br>                        int aa &#x3D; 0 ;<br>                        FileReader fr &#x3D; new FileReader(“E:&#x2F;&#x2F;loguser.txt”);<br>                        BufferedReader br &#x3D; new BufferedReader(fr);<br>                        List<String>list &#x3D; new ArrayList();<br>                        String a &#x3D; br.readLine();<br>                        while (a !&#x3D;null)<br>                        {<br>                            list.add(a);<br>                            a &#x3D; br.readLine();<br>                        }              for (int i &#x3D; 0; i &lt; list.size(); i++) {</p>
-<pre><code>                        String el = list.get(i);
-                        //System.out.print(el);
-                        //System.out.print(run.this.t2.getText()+String.valueOf(run.this.t3.getPassword()));
-                        if (el.equals(run.this.t1.getText() + &quot;,&quot; + run.this.t2.getText() + &quot;,&quot; + String.valueOf(run.this.t3.getPassword())))
-                        &#123;
-                           
-                            run.this.dispose();
-                         
-                            if (run.this.t1.getText().equals(&quot;教师&quot;)) &#123;
- 
-                                new teacher();
- 
-                            &#125;
-                            else if (run.this.t1.getText().equals(&quot;学生&quot;)) &#123;
-                                new student();
-                            &#125;
-                            else if (run.this.t1.getText().equals(&quot;教师端管理员&quot;))
-                            &#123;
-                                new adteacher();
-                            &#125;
-                            else if (run.this.t1.getText().equals(&quot;学生端管理员&quot;))
-                            &#123;
-                                new adstudent();
-                            &#125;
-                            break;
-                        &#125;
-                        if (!(el.equals(run.this.t1.getText() + &quot;,&quot; + run.this.t2.getText() + &quot;,&quot; + String.valueOf(run.this.t3.getPassword()))))
-                        &#123;
-                            aa += 1;
-                          
-                            if (aa == list.size())
-                            &#123;
-                             
-                                run.this.input -= 1;
-                                JDialog d = new JDialog();
-                                d.setSize(100, 100);
-                                JOptionPane.showMessageDialog(d, &quot;登录失败！你还有&quot;+input+&quot;次机会&quot;, &quot;登陆提示&quot;, ERROR_MESSAGE);
-                            &#125;
-                        &#125;
- 
-                &#125;
-                           if (input == 0)
-                    &#123;
-                        run.this.dispose();
-                        System.exit(0);
-                    &#125;
-                &#125;catch(Exception e1) &#123;&#125;
-            &#125;
-        &#125;);
-JButton b2 = new JButton(&quot;注册&quot;);
-        b2.setOpaque(false);
-        b2.addActionListener(new ActionListener() &#123;
-            @Override
-            public void actionPerformed(ActionEvent e) &#123;
-                try &#123;
-                    String[] arr =&#123;&#125;;
-                    FileWriter fw = new FileWriter(&quot;E://loguser.txt&quot;,true);
-                    fw.write(run.this.t1.getText());
-                    fw.write(&quot;,&quot;);
-                    fw.write(run.this.t2.getText());
-                    fw.write(&quot;,&quot;);
-                    fw.write(run.this.t3.getText());
-                    fw.write(&quot;\r\n&quot;);
-                    fw.close();
-                    JDialog d = new JDialog();
-                    d.setSize(100, 100);
-                    JOptionPane.showMessageDialog(d, &quot;注册成功&quot;, &quot;注册提示&quot;,JOptionPane.PLAIN_MESSAGE);
-                &#125;catch(Exception e1)&#123;&#125;
-            &#125;
-        &#125;);
-</code></pre>
+
 <p>​                   </p>
-<p>​    That’s it for the login screen and functionality. All that’s left to do is add components to the panel and add background images to the window. Just find a picture on the Internet. Below is the code snippet for the entire interface and functionality. Of course, I set the login screen as the main class of the entire class, and the rest of the classes are instantiated in the main class.<br>    public void init(){<br>        setSize(580,400);<br>        setTitle(“成绩管理系统”);<br>        setDefaultCloseOperation(3);<br>        setResizable(false);<br>        setLocationRelativeTo(null);</p>
-<pre><code>    JLabel l1 = new JLabel(&quot;身份:&quot;);
-    //t1 = new JTextField(20);
- 
-    JLabel l2 = new JLabel(&quot;姓名:&quot;);
-    //JTextField t2 = new JTextField(20);
- 
-    JLabel l3 = new JLabel(&quot;密码:&quot;);
-    //JTextField t3 = new JTextField(20);
-    //t3.setEchoChar(&#39;*&#39;);
- 
-    JButton b1 = new JButton(&quot;确定&quot;);
-    b1.setOpaque(false);
- 
-    b1.addActionListener(new ActionListener() &#123;
-        @Override
-        public void actionPerformed(ActionEvent e) &#123;
-            try &#123;
-                int aa = 0 ;
-                FileReader fr = new FileReader(&quot;E://loguser.txt&quot;);
-                BufferedReader br = new BufferedReader(fr);
-                List&lt;String&gt;list = new ArrayList();
-                String a = br.readLine();
-                while (a !=null)
-                &#123;
-                    list.add(a);
-                    a = br.readLine();
-                &#125;
-                /*System.out.println(list.size());
-                System.out.println(list.get(0));
-                System.out.println(list.get(1));
-                System.out.println(list.get(2));
-                System.out.println(list.get(3));*/
- 
-                for (int i = 0; i &lt; list.size(); i++) &#123;
- 
-                        String el = list.get(i);
-                        //System.out.print(el);
-                        //System.out.print(run.this.t2.getText()+String.valueOf(run.this.t3.getPassword()));
-                        if (el.equals(run.this.t1.getText() + &quot;,&quot; + run.this.t2.getText() + &quot;,&quot; + String.valueOf(run.this.t3.getPassword())))
-                        &#123;
-                            //System.out.print(&quot;ok&quot;);
-                            run.this.dispose();
-                            //new student();
-                            if (run.this.t1.getText().equals(&quot;教师&quot;)) &#123;
- 
-                                new teacher();
- 
-                            &#125;
-                            else if (run.this.t1.getText().equals(&quot;学生&quot;)) &#123;
-                                new student();
-                            &#125;
-                            else if (run.this.t1.getText().equals(&quot;教师端管理员&quot;))
-                            &#123;
-                                new adteacher();
-                            &#125;
-                            else if (run.this.t1.getText().equals(&quot;学生端管理员&quot;))
-                            &#123;
-                                new adstudent();
-                            &#125;
-                            break;
-                        &#125;
-                        if (!(el.equals(run.this.t1.getText() + &quot;,&quot; + run.this.t2.getText() + &quot;,&quot; + String.valueOf(run.this.t3.getPassword()))))
-                        &#123;
-                            aa += 1;
-                            //System.out.println(aa);
-                            if (aa == list.size())
-                            &#123;
-                                //System.out.print(aa);
-                                run.this.input -= 1;
-                                JDialog d = new JDialog();
-                                d.setSize(100, 100);
-                                JOptionPane.showMessageDialog(d, &quot;登录失败！你还有&quot;+input+&quot;次机会&quot;, &quot;登陆提示&quot;, ERROR_MESSAGE);
-                            &#125;
-                        &#125;
- 
-                &#125;
- 
-                //JDialog d = new JDialog();
-                //d.setSize(100, 100);
-                //JOptionPane.showMessageDialog(d, &quot;登录失败！你还有&quot;+input+&quot;次机会&quot;, &quot;登陆提示&quot;, ERROR_MESSAGE);
-                if (input == 0)
-                &#123;
-                    run.this.dispose();
-                    System.exit(0);
-                &#125;
-            &#125;catch(Exception e1) &#123;&#125;
-        &#125;
-    &#125;);
-    JButton b2 = new JButton(&quot;注册&quot;);
-    b2.setOpaque(false);
-    b2.addActionListener(new ActionListener() &#123;
-        @Override
-        public void actionPerformed(ActionEvent e) &#123;
-            try &#123;
-                String[] arr =&#123;&#125;;
-                FileWriter fw = new FileWriter(&quot;E://loguser.txt&quot;,true);
-                fw.write(run.this.t1.getText());
-                fw.write(&quot;,&quot;);
-                fw.write(run.this.t2.getText());
-                fw.write(&quot;,&quot;);
-                fw.write(run.this.t3.getText());
-                fw.write(&quot;\r\n&quot;);
-                fw.close();
-                JDialog d = new JDialog();
-                d.setSize(100, 100);
-                JOptionPane.showMessageDialog(d, &quot;注册成功&quot;, &quot;注册提示&quot;,JOptionPane.PLAIN_MESSAGE);
-            &#125;catch(Exception e1)&#123;&#125;
-        &#125;
-    &#125;);    
-    JLayeredPane pa = new JLayeredPane();
-    JPanel p1 = new JPanel();
-    ImageIcon image = new ImageIcon(&quot;E://2.jpg&quot;);
-    JLabel ji = new JLabel(image);
-    p1 = (JPanel)getContentPane();
-    p1.add(ji);
-        l1.setBounds(100, 120, 30, 30);
-    t1.setBounds(150,120,200,30);
-    l2.setBounds(100, 170, 30, 30);
-    t2.setBounds(150,170,200,30);
-    l3.setBounds(100, 220, 30, 30);
-    t3.setBounds(150,220,200,30);
-    b1.setBounds(150,270,60,30);
-    b2.setBounds(290,270,60,30);
-     pa.add(p1,JLayeredPane.DEFAULT_LAYER);
-    pa.add(l1, JLayeredPane.MODAL_LAYER);
-    pa.add(l2, JLayeredPane.MODAL_LAYER);
-    pa.add(l3, JLayeredPane.MODAL_LAYER);
-    pa.add(t1, JLayeredPane.MODAL_LAYER);
-    pa.add(t2, JLayeredPane.MODAL_LAYER);
-    pa.add(t3, JLayeredPane.MODAL_LAYER);
-    pa.add(b1, JLayeredPane.MODAL_LAYER);
-    pa.add(b2, JLayeredPane.MODAL_LAYER);
-        setLayeredPane(pa);
-    setVisible(true);
- 
-&#125;
-public run()
-&#123;
-    init();
-&#125;
-public static void main(String[] args)
-&#123;
-    new run();
-&#125;
-&#125;
-</code></pre>
+<p>​    That’s it for the login screen and functionality. All that’s left to do is add components to the panel and add background images to the window. Just find a picture on the Internet. Below is the code snippet for the entire interface and functionality. Of course, I set the login screen as the main class of the entire class, and the rest of the classes are instantiated in the main class.</p>
+<p>​     </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">init</span><span class="hljs-params">()</span>&#123;<br>        setSize(<span class="hljs-number">580</span>,<span class="hljs-number">400</span>);<br>        setTitle(<span class="hljs-string">&quot;成绩管理系统&quot;</span>);<br>        setDefaultCloseOperation(<span class="hljs-number">3</span>);<br>        setResizable(<span class="hljs-literal">false</span>);<br>        setLocationRelativeTo(<span class="hljs-literal">null</span>);<br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;身份:&quot;</span>);<br>    <span class="hljs-comment">//t1 = new JTextField(20);</span><br> <br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;姓名:&quot;</span>);<br>    <span class="hljs-comment">//JTextField t2 = new JTextField(20);</span><br> <br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;密码:&quot;</span>);<br>    <span class="hljs-comment">//JTextField t3 = new JTextField(20);</span><br>    <span class="hljs-comment">//t3.setEchoChar(&#x27;*&#x27;);</span><br> <br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;确定&quot;</span>);<br>    b1.setOpaque(<span class="hljs-literal">false</span>);<br> <br>    b1.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>        <span class="hljs-meta">@Override</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                <span class="hljs-type">int</span> <span class="hljs-variable">aa</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span> ;<br>                <span class="hljs-type">FileReader</span> <span class="hljs-variable">fr</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileReader</span>(<span class="hljs-string">&quot;E://loguser.txt&quot;</span>);<br>                <span class="hljs-type">BufferedReader</span> <span class="hljs-variable">br</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">BufferedReader</span>(fr);<br>                List&lt;String&gt;list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<br>                <span class="hljs-type">String</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> br.readLine();<br>                <span class="hljs-keyword">while</span> (a !=<span class="hljs-literal">null</span>)<br>                &#123;<br>                    list.add(a);<br>                    a = br.readLine();<br>                &#125;<br>                <span class="hljs-comment">/*System.out.println(list.size());</span><br><span class="hljs-comment">                System.out.println(list.get(0));</span><br><span class="hljs-comment">                System.out.println(list.get(1));</span><br><span class="hljs-comment">                System.out.println(list.get(2));</span><br><span class="hljs-comment">                System.out.println(list.get(3));*/</span><br> <br>                <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; list.size(); i++) &#123;<br> <br>                        <span class="hljs-type">String</span> <span class="hljs-variable">el</span> <span class="hljs-operator">=</span> list.get(i);<br>                        <span class="hljs-comment">//System.out.print(el);</span><br>                        <span class="hljs-comment">//System.out.print(run.this.t2.getText()+String.valueOf(run.this.t3.getPassword()));</span><br>                        <span class="hljs-keyword">if</span> (el.equals(run.<span class="hljs-built_in">this</span>.t1.getText() + <span class="hljs-string">&quot;,&quot;</span> + run.<span class="hljs-built_in">this</span>.t2.getText() + <span class="hljs-string">&quot;,&quot;</span> + String.valueOf(run.<span class="hljs-built_in">this</span>.t3.getPassword())))<br>                        &#123;<br>                            <span class="hljs-comment">//System.out.print(&quot;ok&quot;);</span><br>                            run.<span class="hljs-built_in">this</span>.dispose();<br>                            <span class="hljs-comment">//new student();</span><br>                            <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;教师&quot;</span>)) &#123;<br> <br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">teacher</span>();<br> <br>                            &#125;<br>                            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;学生&quot;</span>)) &#123;<br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">student</span>();<br>                            &#125;<br>                            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;教师端管理员&quot;</span>))<br>                            &#123;<br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">adteacher</span>();<br>                            &#125;<br>                            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (run.<span class="hljs-built_in">this</span>.t1.getText().equals(<span class="hljs-string">&quot;学生端管理员&quot;</span>))<br>                            &#123;<br>                                <span class="hljs-keyword">new</span> <span class="hljs-title class_">adstudent</span>();<br>                            &#125;<br>                            <span class="hljs-keyword">break</span>;<br>                        &#125;<br>                        <span class="hljs-keyword">if</span> (!(el.equals(run.<span class="hljs-built_in">this</span>.t1.getText() + <span class="hljs-string">&quot;,&quot;</span> + run.<span class="hljs-built_in">this</span>.t2.getText() + <span class="hljs-string">&quot;,&quot;</span> + String.valueOf(run.<span class="hljs-built_in">this</span>.t3.getPassword()))))<br>                        &#123;<br>                            aa += <span class="hljs-number">1</span>;<br>                            <span class="hljs-comment">//System.out.println(aa);</span><br>                            <span class="hljs-keyword">if</span> (aa == list.size())<br>                            &#123;<br>                                <span class="hljs-comment">//System.out.print(aa);</span><br>                                run.<span class="hljs-built_in">this</span>.input -= <span class="hljs-number">1</span>;<br>                                <span class="hljs-type">JDialog</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>();<br>                                d.setSize(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);<br>                                JOptionPane.showMessageDialog(d, <span class="hljs-string">&quot;登录失败！你还有&quot;</span>+input+<span class="hljs-string">&quot;次机会&quot;</span>, <span class="hljs-string">&quot;登陆提示&quot;</span>, ERROR_MESSAGE);<br>                            &#125;<br>                        &#125;<br> <br>                &#125;<br> <br>                <span class="hljs-comment">//JDialog d = new JDialog();</span><br>                <span class="hljs-comment">//d.setSize(100, 100);</span><br>                <span class="hljs-comment">//JOptionPane.showMessageDialog(d, &quot;登录失败！你还有&quot;+input+&quot;次机会&quot;, &quot;登陆提示&quot;, ERROR_MESSAGE);</span><br>                <span class="hljs-keyword">if</span> (input == <span class="hljs-number">0</span>)<br>                &#123;<br>                    run.<span class="hljs-built_in">this</span>.dispose();<br>                    System.exit(<span class="hljs-number">0</span>);<br>                &#125;<br>            &#125;<span class="hljs-keyword">catch</span>(Exception e1) &#123;&#125;<br>        &#125;<br>    &#125;);<br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;注册&quot;</span>);<br>    b2.setOpaque(<span class="hljs-literal">false</span>);<br>    b2.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>        <span class="hljs-meta">@Override</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                String[] arr =&#123;&#125;;<br>                <span class="hljs-type">FileWriter</span> <span class="hljs-variable">fw</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileWriter</span>(<span class="hljs-string">&quot;E://loguser.txt&quot;</span>,<span class="hljs-literal">true</span>);<br>                fw.write(run.<span class="hljs-built_in">this</span>.t1.getText());<br>                fw.write(<span class="hljs-string">&quot;,&quot;</span>);<br>                fw.write(run.<span class="hljs-built_in">this</span>.t2.getText());<br>                fw.write(<span class="hljs-string">&quot;,&quot;</span>);<br>                fw.write(run.<span class="hljs-built_in">this</span>.t3.getText());<br>                fw.write(<span class="hljs-string">&quot;\r\n&quot;</span>);<br>                fw.close();<br>                <span class="hljs-type">JDialog</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>();<br>                d.setSize(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>);<br>                JOptionPane.showMessageDialog(d, <span class="hljs-string">&quot;注册成功&quot;</span>, <span class="hljs-string">&quot;注册提示&quot;</span>,JOptionPane.PLAIN_MESSAGE);<br>            &#125;<span class="hljs-keyword">catch</span>(Exception e1)&#123;&#125;<br>        &#125;<br>    &#125;);    <br>    <span class="hljs-type">JLayeredPane</span> <span class="hljs-variable">pa</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLayeredPane</span>();<br>    <span class="hljs-type">JPanel</span> <span class="hljs-variable">p1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JPanel</span>();<br>    <span class="hljs-type">ImageIcon</span> <span class="hljs-variable">image</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ImageIcon</span>(<span class="hljs-string">&quot;E://2.jpg&quot;</span>);<br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">ji</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(image);<br>    p1 = (JPanel)getContentPane();<br>    p1.add(ji);<br>        l1.setBounds(<span class="hljs-number">100</span>, <span class="hljs-number">120</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t1.setBounds(<span class="hljs-number">150</span>,<span class="hljs-number">120</span>,<span class="hljs-number">200</span>,<span class="hljs-number">30</span>);<br>    l2.setBounds(<span class="hljs-number">100</span>, <span class="hljs-number">170</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t2.setBounds(<span class="hljs-number">150</span>,<span class="hljs-number">170</span>,<span class="hljs-number">200</span>,<span class="hljs-number">30</span>);<br>    l3.setBounds(<span class="hljs-number">100</span>, <span class="hljs-number">220</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t3.setBounds(<span class="hljs-number">150</span>,<span class="hljs-number">220</span>,<span class="hljs-number">200</span>,<span class="hljs-number">30</span>);<br>    b1.setBounds(<span class="hljs-number">150</span>,<span class="hljs-number">270</span>,<span class="hljs-number">60</span>,<span class="hljs-number">30</span>);<br>    b2.setBounds(<span class="hljs-number">290</span>,<span class="hljs-number">270</span>,<span class="hljs-number">60</span>,<span class="hljs-number">30</span>);<br>     pa.add(p1,JLayeredPane.DEFAULT_LAYER);<br>    pa.add(l1, JLayeredPane.MODAL_LAYER);<br>    pa.add(l2, JLayeredPane.MODAL_LAYER);<br>    pa.add(l3, JLayeredPane.MODAL_LAYER);<br>    pa.add(t1, JLayeredPane.MODAL_LAYER);<br>    pa.add(t2, JLayeredPane.MODAL_LAYER);<br>    pa.add(t3, JLayeredPane.MODAL_LAYER);<br>    pa.add(b1, JLayeredPane.MODAL_LAYER);<br>    pa.add(b2, JLayeredPane.MODAL_LAYER);<br>        setLayeredPane(pa);<br>    setVisible(<span class="hljs-literal">true</span>);<br> <br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span><br>&#123;<br>    init();<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span><br>&#123;<br>    <span class="hljs-keyword">new</span> <span class="hljs-title class_">run</span>();<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
 <p> Next we need to write the classes we want to instantiate student.class and teacher.class. It still inherits the JFrame interface. Using the teacher.class example, it is still necessary to add an event listener to the component. By the component to monitor whether the occurrence of events, in the corresponding corresponding operations. For the store button, all we need to do is instantiate dbopra, call insert, and store the data to the database. You can insert the data you entered in the text box by taking the text entered in the text box as an argument to the insert function. Query, delete are the same reason, just pass in different parameters.</p>
-<pre><code>class teacher extends JFrame&#123;
-    final JTextField t1 = new JTextField(20);
-    final JTextField t2 = new JTextField(20);
-    final JTextField t3 = new JTextField(20);
-    final JTextField t4 = new JTextField(20);
-    final JTextField t5 = new JTextField(20);
-    public teacher()
-    &#123;
-        init();
-    &#125;
-    public void init()
-    &#123;
-        setSize(580,400);
-        setTitle(&quot;教师端&quot;);
-        setDefaultCloseOperation(3);
-        setResizable(false);
-        setLocationRelativeTo(null);
-        //setLayout(new GridLayout(6,1));    JLabel l2 = new JLabel(&quot;学号&quot;);
-    //t1 = new JTextField(20);
- 
-    JLabel l1 = new JLabel(&quot;姓名&quot;);
-    //JTextField t2 = new JTextField(20);
- 
-    JLabel l3 = new JLabel(&quot;python&quot;);
- 
-    JLabel l4 = new JLabel(&quot;java&quot;);
- 
-    JLabel l5 = new JLabel(&quot;数据库&quot;);
- 
-    JButton b1 = new JButton(&quot;存储&quot;);
-    b1.setOpaque(false);
-    b1.addActionListener(new ActionListener() &#123;
-        @Override
-        public void actionPerformed(ActionEvent e) &#123;
-            try&#123;
-                dbopra tdp = new dbopra();
-                String a = &quot;insert into studentinfo1 values &quot;+&quot;(&quot;+teacher.this.t1.getText()+&quot;,&quot;+teacher.this.t2.getText()+&quot;,&quot;+teacher.this.t3.getText()+&quot;,&quot;+teacher.this.t4.getText()+&quot;,&quot;+teacher.this.t5.getText()+&quot;)&quot;;
-                System.out.print(a);
-                tdp.insert(teacher.this.t1.getText(),Integer.parseInt(teacher.this.t2.getText()),Integer.parseInt(teacher.this.t3.getText()),Integer.parseInt(teacher.this.t4.getText()),Integer.parseInt(teacher.this.t5.getText()));
-                JDialog d = new JDialog();
-                d.setSize(100,100);
-                JOptionPane.showMessageDialog(d,&quot;已存入数据库&quot;,&quot;存储提示&quot;,JOptionPane.PLAIN_MESSAGE);
-            &#125;catch(Exception e1)&#123;&#125;
-        &#125;
-    &#125;);
- 
-    JButton b3  = new JButton(&quot;修改&quot;);
-    b3.setOpaque(false);
-    b3.addActionListener(new ActionListener() &#123;
-        @Override
-        public void actionPerformed(ActionEvent e) &#123;
-            teacher.this.dispose();
-            new teacherup();
-        &#125;
-    &#125;);
- 
-    JButton b4 = new JButton(&quot;删除&quot;);
-    b4.setOpaque(false);
-    b4.addActionListener(new ActionListener() &#123;
-        @Override
-        public void actionPerformed(ActionEvent e) &#123;
-            try &#123;
-                dbopra tdp = new dbopra();
-                tdp.delete(Integer.parseInt(teacher.this.t2.getText()));
-                JDialog d = new JDialog();
-                d.setSize(100,100);
-                JOptionPane.showMessageDialog(d, &quot;删除成功&quot;, &quot;删除提示&quot;,JOptionPane.PLAIN_MESSAGE);
-            &#125;catch (Exception e1)&#123;&#125;
-        &#125;
-    &#125;);
- 
-    JButton b2 = new JButton(&quot;查询&quot;);
-    b2.setOpaque(false);
-    b2.addActionListener(new ActionListener() &#123;
-        @Override
-        public void actionPerformed(ActionEvent e) &#123;
-            try &#123;
-                //System.out.print(&quot;ok&quot;);
-                dbopra tdp = new dbopra();
-                //System.out.print(&quot;1ok&quot;);
-                //tdp.select(Integer.parseInt(teacher.this.t2.getText()));
-                String []a  = tdp.select(Integer.parseInt(teacher.this.t2.getText()));
-                //System.out.print(a[0]);
-                //System.out.print(a[1]);
-                t1.setText(a[0]);
-                t2.setText(a[1]);
-                t3.setText(a[2]);
-                t4.setText(a[3]);
-                t5.setText(a[4]);
-            &#125; catch (Exception e1) &#123;&#125;
-        &#125;
-    &#125;);
- 
-    JLayeredPane pa = new JLayeredPane();
-    JPanel p1 = new JPanel();
-    ImageIcon image = new ImageIcon(&quot;E://3.jpg&quot;);
-    JLabel jl = new JLabel(image);
-    p1 = (JPanel)getContentPane();
-    p1.add(jl);
- 
-    l1.setBounds(150, 40, 30, 30);
-    t1.setBounds(200, 40, 220, 30);
-    l2.setBounds(150, 90, 30, 30);
-    t2.setBounds(200, 90, 220, 30);
-    l3.setBounds(150, 140, 60, 30);
-    t3.setBounds(200, 140, 220, 30);
-    l4.setBounds(150, 190, 30, 30);
-    t4.setBounds(200, 190, 220, 30);
-    l5.setBounds(150, 240, 60, 30);
-    t5.setBounds(200, 240, 220, 30);
-    b1.setBounds(180, 290, 60, 30);
-    b2.setBounds(250, 290, 60, 30);
-    b3.setBounds(320, 290, 60, 30);
-    b4.setBounds(390, 290, 60, 30);
-    pa.add(p1, JLayeredPane.DEFAULT_LAYER);
-    pa.add(l1, JLayeredPane.MODAL_LAYER);
-    pa.add(l2, JLayeredPane.MODAL_LAYER);
-    pa.add(l3, JLayeredPane.MODAL_LAYER);
-    pa.add(l4, JLayeredPane.MODAL_LAYER);
-    pa.add(l5, JLayeredPane.MODAL_LAYER);
-    pa.add(t1, JLayeredPane.MODAL_LAYER);
-    pa.add(t2, JLayeredPane.MODAL_LAYER);
-    pa.add(t3, JLayeredPane.MODAL_LAYER);
-    pa.add(t4, JLayeredPane.MODAL_LAYER);
-    pa.add(t5, JLayeredPane.MODAL_LAYER);
-    pa.add(b1, JLayeredPane.MODAL_LAYER);
-    pa.add(b2, JLayeredPane.MODAL_LAYER);
-    pa.add(b3, JLayeredPane.MODAL_LAYER);
-    pa.add(b4, JLayeredPane.MODAL_LAYER);
-    setLayeredPane(pa);
-    setVisible(true);
-</code></pre>
-<p>​<br>        }</p>
-<pre><code>&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">teacher</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">JFrame</span>&#123;<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t4</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t5</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">teacher</span><span class="hljs-params">()</span><br>    &#123;<br>        init();<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">init</span><span class="hljs-params">()</span><br>    &#123;<br>        setSize(<span class="hljs-number">580</span>,<span class="hljs-number">400</span>);<br>        setTitle(<span class="hljs-string">&quot;教师端&quot;</span>);<br>        setDefaultCloseOperation(<span class="hljs-number">3</span>);<br>        setResizable(<span class="hljs-literal">false</span>);<br>        setLocationRelativeTo(<span class="hljs-literal">null</span>);<br>        <span class="hljs-comment">//setLayout(new GridLayout(6,1));    JLabel l2 = new JLabel(&quot;学号&quot;);</span><br>    <span class="hljs-comment">//t1 = new JTextField(20);</span><br> <br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;姓名&quot;</span>);<br>    <span class="hljs-comment">//JTextField t2 = new JTextField(20);</span><br> <br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;python&quot;</span>);<br> <br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l4</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;java&quot;</span>);<br> <br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l5</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;数据库&quot;</span>);<br> <br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;存储&quot;</span>);<br>    b1.setOpaque(<span class="hljs-literal">false</span>);<br>    b1.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>        <span class="hljs-meta">@Override</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>            <span class="hljs-keyword">try</span>&#123;<br>                <span class="hljs-type">dbopra</span> <span class="hljs-variable">tdp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">dbopra</span>();<br>                <span class="hljs-type">String</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;insert into studentinfo1 values &quot;</span>+<span class="hljs-string">&quot;(&quot;</span>+teacher.<span class="hljs-built_in">this</span>.t1.getText()+<span class="hljs-string">&quot;,&quot;</span>+teacher.<span class="hljs-built_in">this</span>.t2.getText()+<span class="hljs-string">&quot;,&quot;</span>+teacher.<span class="hljs-built_in">this</span>.t3.getText()+<span class="hljs-string">&quot;,&quot;</span>+teacher.<span class="hljs-built_in">this</span>.t4.getText()+<span class="hljs-string">&quot;,&quot;</span>+teacher.<span class="hljs-built_in">this</span>.t5.getText()+<span class="hljs-string">&quot;)&quot;</span>;<br>                System.out.print(a);<br>                tdp.insert(teacher.<span class="hljs-built_in">this</span>.t1.getText(),Integer.parseInt(teacher.<span class="hljs-built_in">this</span>.t2.getText()),Integer.parseInt(teacher.<span class="hljs-built_in">this</span>.t3.getText()),Integer.parseInt(teacher.<span class="hljs-built_in">this</span>.t4.getText()),Integer.parseInt(teacher.<span class="hljs-built_in">this</span>.t5.getText()));<br>                <span class="hljs-type">JDialog</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>();<br>                d.setSize(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>);<br>                JOptionPane.showMessageDialog(d,<span class="hljs-string">&quot;已存入数据库&quot;</span>,<span class="hljs-string">&quot;存储提示&quot;</span>,JOptionPane.PLAIN_MESSAGE);<br>            &#125;<span class="hljs-keyword">catch</span>(Exception e1)&#123;&#125;<br>        &#125;<br>    &#125;);<br> <br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b3</span>  <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;修改&quot;</span>);<br>    b3.setOpaque(<span class="hljs-literal">false</span>);<br>    b3.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>        <span class="hljs-meta">@Override</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>            teacher.<span class="hljs-built_in">this</span>.dispose();<br>            <span class="hljs-keyword">new</span> <span class="hljs-title class_">teacherup</span>();<br>        &#125;<br>    &#125;);<br> <br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b4</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;删除&quot;</span>);<br>    b4.setOpaque(<span class="hljs-literal">false</span>);<br>    b4.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>        <span class="hljs-meta">@Override</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                <span class="hljs-type">dbopra</span> <span class="hljs-variable">tdp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">dbopra</span>();<br>                tdp.delete(Integer.parseInt(teacher.<span class="hljs-built_in">this</span>.t2.getText()));<br>                <span class="hljs-type">JDialog</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>();<br>                d.setSize(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>);<br>                JOptionPane.showMessageDialog(d, <span class="hljs-string">&quot;删除成功&quot;</span>, <span class="hljs-string">&quot;删除提示&quot;</span>,JOptionPane.PLAIN_MESSAGE);<br>            &#125;<span class="hljs-keyword">catch</span> (Exception e1)&#123;&#125;<br>        &#125;<br>    &#125;);<br> <br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;查询&quot;</span>);<br>    b2.setOpaque(<span class="hljs-literal">false</span>);<br>    b2.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>        <span class="hljs-meta">@Override</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                <span class="hljs-comment">//System.out.print(&quot;ok&quot;);</span><br>                <span class="hljs-type">dbopra</span> <span class="hljs-variable">tdp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">dbopra</span>();<br>                <span class="hljs-comment">//System.out.print(&quot;1ok&quot;);</span><br>                <span class="hljs-comment">//tdp.select(Integer.parseInt(teacher.this.t2.getText()));</span><br>                String []a  = tdp.select(Integer.parseInt(teacher.<span class="hljs-built_in">this</span>.t2.getText()));<br>                <span class="hljs-comment">//System.out.print(a[0]);</span><br>                <span class="hljs-comment">//System.out.print(a[1]);</span><br>                t1.setText(a[<span class="hljs-number">0</span>]);<br>                t2.setText(a[<span class="hljs-number">1</span>]);<br>                t3.setText(a[<span class="hljs-number">2</span>]);<br>                t4.setText(a[<span class="hljs-number">3</span>]);<br>                t5.setText(a[<span class="hljs-number">4</span>]);<br>            &#125; <span class="hljs-keyword">catch</span> (Exception e1) &#123;&#125;<br>        &#125;<br>    &#125;);<br> <br>    <span class="hljs-type">JLayeredPane</span> <span class="hljs-variable">pa</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLayeredPane</span>();<br>    <span class="hljs-type">JPanel</span> <span class="hljs-variable">p1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JPanel</span>();<br>    <span class="hljs-type">ImageIcon</span> <span class="hljs-variable">image</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ImageIcon</span>(<span class="hljs-string">&quot;E://3.jpg&quot;</span>);<br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">jl</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(image);<br>    p1 = (JPanel)getContentPane();<br>    p1.add(jl);<br> <br>    l1.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">40</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t1.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">40</span>, <span class="hljs-number">220</span>, <span class="hljs-number">30</span>);<br>    l2.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">90</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t2.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">90</span>, <span class="hljs-number">220</span>, <span class="hljs-number">30</span>);<br>    l3.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">140</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>);<br>    t3.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">140</span>, <span class="hljs-number">220</span>, <span class="hljs-number">30</span>);<br>    l4.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">190</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t4.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">190</span>, <span class="hljs-number">220</span>, <span class="hljs-number">30</span>);<br>    l5.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">240</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>);<br>    t5.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">240</span>, <span class="hljs-number">220</span>, <span class="hljs-number">30</span>);<br>    b1.setBounds(<span class="hljs-number">180</span>, <span class="hljs-number">290</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>);<br>    b2.setBounds(<span class="hljs-number">250</span>, <span class="hljs-number">290</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>);<br>    b3.setBounds(<span class="hljs-number">320</span>, <span class="hljs-number">290</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>);<br>    b4.setBounds(<span class="hljs-number">390</span>, <span class="hljs-number">290</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>);<br>    pa.add(p1, JLayeredPane.DEFAULT_LAYER);<br>    pa.add(l1, JLayeredPane.MODAL_LAYER);<br>    pa.add(l2, JLayeredPane.MODAL_LAYER);<br>    pa.add(l3, JLayeredPane.MODAL_LAYER);<br>    pa.add(l4, JLayeredPane.MODAL_LAYER);<br>    pa.add(l5, JLayeredPane.MODAL_LAYER);<br>    pa.add(t1, JLayeredPane.MODAL_LAYER);<br>    pa.add(t2, JLayeredPane.MODAL_LAYER);<br>    pa.add(t3, JLayeredPane.MODAL_LAYER);<br>    pa.add(t4, JLayeredPane.MODAL_LAYER);<br>    pa.add(t5, JLayeredPane.MODAL_LAYER);<br>    pa.add(b1, JLayeredPane.MODAL_LAYER);<br>    pa.add(b2, JLayeredPane.MODAL_LAYER);<br>    pa.add(b3, JLayeredPane.MODAL_LAYER);<br>    pa.add(b4, JLayeredPane.MODAL_LAYER);<br>    setLayeredPane(pa);<br>    setVisible(<span class="hljs-literal">true</span>);<br></code></pre></td></tr></table></figure>
+
+
+<p>​<br>​        }<br>​<br>    }</p>
 <p> For the modification action, I wrote an action to modify the panel, which is done by Teacherup.class. If you click Modify on the teacherup.clas interface, you can instantiate Teacherup. clas and jump out of the modify interface. To complete the modification operation. Below are the renderings.</p>
 <p>Teacherup. class implements the modify panel.</p>
-<pre><code>class teacherup extends JFrame&#123;
-    final JTextField t1 = new JTextField(20);
-    final JTextField t2 = new JTextField(20);
-    final JTextField t3 = new JTextField(20);
-public teacherup()
-&#123;
-    init();
-&#125;
-public void init()
-&#123;
-    setSize(580,400);
-    setTitle(&quot;修改面板&quot;);
-    setResizable(false);
-    setLocationRelativeTo(null);
-    //setLayout(new GridLayout(4,1));
- 
-    JLabel l1 = new JLabel(&quot;学号&quot;);
-    JLabel l2 = new JLabel(&quot;项目&quot;);
-    JLabel l3 = new JLabel(&quot;结果&quot;);
-    JButton b1 =new JButton(&quot;确定&quot;);
-    b1.setOpaque(false);
-    b1.addActionListener(new ActionListener() &#123;
-        @Override
-        public void actionPerformed(ActionEvent e) &#123;
-            try &#123;
-                dbopra tdp = new dbopra();
-                if ((teacherup.this.t2.getText()).equals(&quot;姓名&quot;))
-                &#123;
-                    tdp.updatename(teacherup.this.t2.getText(), teacherup.this.t3.getText(), Integer.parseInt(teacherup.this.t1.getText()));
-                &#125;
-                else &#123;
-                    tdp.update(teacherup.this.t2.getText(), Integer.parseInt(teacherup.this.t3.getText()), Integer.parseInt(teacherup.this.t1.getText()));
-                &#125;
-                JDialog d = new JDialog();
-                d.setSize(100,100);
-                JOptionPane.showMessageDialog(d,&quot;修改成功&quot;,&quot;修改提示&quot;,JOptionPane.PLAIN_MESSAGE);
-                teacherup.this.dispose();
-                new teacher();
-            &#125;catch(Exception e1)&#123;&#125;
-        &#125;
-    &#125;);
- 
-    JLayeredPane pa = new JLayeredPane();
-    JPanel p = new JPanel();
-    ImageIcon image = new ImageIcon(&quot;E://3.jpg&quot;);
-    JLabel jl = new JLabel(image);
-    p = (JPanel)getContentPane();
-    p.add(jl);
- 
-    l1.setBounds(150, 60, 30, 30);
-    t1.setBounds(200, 60, 200, 30);
-    l2.setBounds(150, 140, 30, 30);
-    t2.setBounds(200, 140, 200, 30);
-    l3.setBounds(150, 220, 30, 30);
-    t3.setBounds(200, 220, 200, 30);
-    b1.setBounds(260, 300, 60, 30);
- 
-    pa.add(p, JLayeredPane.DEFAULT_LAYER);
-    pa.add(l1, JLayeredPane.MODAL_LAYER);
-    pa.add(l2, JLayeredPane.MODAL_LAYER);
-    pa.add(l3, JLayeredPane.MODAL_LAYER);
- 
-    pa.add(t1, JLayeredPane.MODAL_LAYER);
-    pa.add(t2, JLayeredPane.MODAL_LAYER);
-    pa.add(t3, JLayeredPane.MODAL_LAYER);
- 
-    pa.add(b1, JLayeredPane.MODAL_LAYER);
- 
-    setLayeredPane(pa);
-    ​        setVisible(true);
-​    &#125;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">teacherup</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">JFrame</span>&#123;<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">JTextField</span> <span class="hljs-variable">t3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JTextField</span>(<span class="hljs-number">20</span>);<br><span class="hljs-keyword">public</span> <span class="hljs-title function_">teacherup</span><span class="hljs-params">()</span><br>&#123;<br>    init();<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">init</span><span class="hljs-params">()</span><br>&#123;<br>    setSize(<span class="hljs-number">580</span>,<span class="hljs-number">400</span>);<br>    setTitle(<span class="hljs-string">&quot;修改面板&quot;</span>);<br>    setResizable(<span class="hljs-literal">false</span>);<br>    setLocationRelativeTo(<span class="hljs-literal">null</span>);<br>    <span class="hljs-comment">//setLayout(new GridLayout(4,1));</span><br> <br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;学号&quot;</span>);<br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;项目&quot;</span>);<br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">l3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(<span class="hljs-string">&quot;结果&quot;</span>);<br>    <span class="hljs-type">JButton</span> <span class="hljs-variable">b1</span> <span class="hljs-operator">=</span><span class="hljs-keyword">new</span> <span class="hljs-title class_">JButton</span>(<span class="hljs-string">&quot;确定&quot;</span>);<br>    b1.setOpaque(<span class="hljs-literal">false</span>);<br>    b1.addActionListener(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ActionListener</span>() &#123;<br>        <span class="hljs-meta">@Override</span><br>        <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">actionPerformed</span><span class="hljs-params">(ActionEvent e)</span> &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                <span class="hljs-type">dbopra</span> <span class="hljs-variable">tdp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">dbopra</span>();<br>                <span class="hljs-keyword">if</span> ((teacherup.<span class="hljs-built_in">this</span>.t2.getText()).equals(<span class="hljs-string">&quot;姓名&quot;</span>))<br>                &#123;<br>                    tdp.updatename(teacherup.<span class="hljs-built_in">this</span>.t2.getText(), teacherup.<span class="hljs-built_in">this</span>.t3.getText(), Integer.parseInt(teacherup.<span class="hljs-built_in">this</span>.t1.getText()));<br>                &#125;<br>                <span class="hljs-keyword">else</span> &#123;<br>                    tdp.update(teacherup.<span class="hljs-built_in">this</span>.t2.getText(), Integer.parseInt(teacherup.<span class="hljs-built_in">this</span>.t3.getText()), Integer.parseInt(teacherup.<span class="hljs-built_in">this</span>.t1.getText()));<br>                &#125;<br>                <span class="hljs-type">JDialog</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JDialog</span>();<br>                d.setSize(<span class="hljs-number">100</span>,<span class="hljs-number">100</span>);<br>                JOptionPane.showMessageDialog(d,<span class="hljs-string">&quot;修改成功&quot;</span>,<span class="hljs-string">&quot;修改提示&quot;</span>,JOptionPane.PLAIN_MESSAGE);<br>                teacherup.<span class="hljs-built_in">this</span>.dispose();<br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">teacher</span>();<br>            &#125;<span class="hljs-keyword">catch</span>(Exception e1)&#123;&#125;<br>        &#125;<br>    &#125;);<br> <br>    <span class="hljs-type">JLayeredPane</span> <span class="hljs-variable">pa</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLayeredPane</span>();<br>    <span class="hljs-type">JPanel</span> <span class="hljs-variable">p</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JPanel</span>();<br>    <span class="hljs-type">ImageIcon</span> <span class="hljs-variable">image</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ImageIcon</span>(<span class="hljs-string">&quot;E://3.jpg&quot;</span>);<br>    <span class="hljs-type">JLabel</span> <span class="hljs-variable">jl</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JLabel</span>(image);<br>    p = (JPanel)getContentPane();<br>    p.add(jl);<br> <br>    l1.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t1.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">60</span>, <span class="hljs-number">200</span>, <span class="hljs-number">30</span>);<br>    l2.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">140</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t2.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">140</span>, <span class="hljs-number">200</span>, <span class="hljs-number">30</span>);<br>    l3.setBounds(<span class="hljs-number">150</span>, <span class="hljs-number">220</span>, <span class="hljs-number">30</span>, <span class="hljs-number">30</span>);<br>    t3.setBounds(<span class="hljs-number">200</span>, <span class="hljs-number">220</span>, <span class="hljs-number">200</span>, <span class="hljs-number">30</span>);<br>    b1.setBounds(<span class="hljs-number">260</span>, <span class="hljs-number">300</span>, <span class="hljs-number">60</span>, <span class="hljs-number">30</span>);<br> <br>    pa.add(p, JLayeredPane.DEFAULT_LAYER);<br>    pa.add(l1, JLayeredPane.MODAL_LAYER);<br>    pa.add(l2, JLayeredPane.MODAL_LAYER);<br>    pa.add(l3, JLayeredPane.MODAL_LAYER);<br> <br>    pa.add(t1, JLayeredPane.MODAL_LAYER);<br>    pa.add(t2, JLayeredPane.MODAL_LAYER);<br>    pa.add(t3, JLayeredPane.MODAL_LAYER);<br> <br>    pa.add(b1, JLayeredPane.MODAL_LAYER);<br> <br>    setLayeredPane(pa);<br>    ​        setVisible(<span class="hljs-literal">true</span>);<br>​    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
-&#125;
-</code></pre>
+
 <p>So basically finished, the student side and the teacher side basically no difference, is to reduce the modification, storage, delete permissions, only have query function, I will not put the code, you can delete according to the teacher side.</p>
 <p>Wrote it. The basic system is already in place. Teachers have the function of adding, deleting, checking and changing, and students have the function of querying. If you need to add some analysis functions of results, you can add them by yourself.</p>
 <p>I’ll leave it there for now. Vegetable chicken 1, if there is a mistake, hope to correct.</p>
 
+              
             </div>
-            <hr>
+            <hr/>
             <div>
-              <div class="post-metas mb-3">
-                
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/categories/java-MySQL/">java MySQL</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/originate/">originate</a>
-                    
-                  </div>
-                
-              </div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/java-MySQL/" class="category-chain-item">java MySQL</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/originate/">#originate</a>
+      
+    </div>
+  
+</div>
+
+
               
-                <p class="note note-warning">
-                  
-                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
-                  
-                </p>
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Java course design is based on C/S end student score management system</div>
+      <div>http://example.com/2021/07/02/Java-se/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>feeling-cold</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>July 2, 2021</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>Licensed under</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
               
-              
-                <div class="post-prevnext">
+                <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/09/28/dangdang-com/">
+                      <a href="/2021/09/28/dangdang-com/" title="the html+css of imitate dangdang.com">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">the html+css of imitate dangdang.com</span>
                         <span class="visible-mobile">Previous</span>
@@ -819,7 +423,7 @@ public void init()
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/10/10/buy/">
+                      <a href="/2020/10/10/buy/" title="Question 100 money to buy 100 chicken with notes">
                         <span class="hidden-mobile">Question 100 money to buy 100 chicken with notes</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
@@ -831,18 +435,14 @@ public void init()
             </div>
 
             
-              <!-- Comments -->
-              <article class="comments" id="comments" lazyload>
-                
-                  
-                
-                
+  <article id="comments" lazyload>
+    
   <div id="valine"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#valine', function() {
-      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.4.18/Valine.min.js', function() {
         var options = Object.assign(
-          {"appId":"GrSPUShS3LLIYI0UPdhKEgrK-gzGzoHsz","appKey":"WKNaX2s1diATNfudTNOEwFJC","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {"appId":"GrSPUShS3LLIYI0UPdhKEgrK-gzGzoHsz","appKey":"WKNaX2s1diATNfudTNOEwFJC","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"https://focold.top","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
           {
             el: "#valine",
             path: window.location.pathname
@@ -850,7 +450,9 @@ public void init()
         )
         new Valine(options);
         Fluid.utils.waitElementVisible('#valine .vcontent', () => {
-          Fluid.plugins.initFancyBox('#valine .vcontent img:not(.vemoji)');
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
         })
       });
     });
@@ -858,25 +460,56 @@ public void init()
   <noscript>Please enable JavaScript to view the comments</noscript>
 
 
-              </article>
-            
+  </article>
+
+
           </article>
         </div>
       </div>
     </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;Table of Contents</p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
-      </div>
-    
+
+
+  </aside>
+
+
+    </div>
   </div>
 </div>
 
-<!-- Custom -->
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
 
 
     
@@ -901,60 +534,37 @@ public void init()
       <div class="modal-body mx-3">
         <div class="md-form mb-5">
           <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v"
-                 for="local-search-input">keyword</label>
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
         </div>
         <div class="list-group" id="local-search-result"></div>
       </div>
     </div>
   </div>
 </div>
+
     
 
     
   </main>
 
-  <footer class="text-center mt-5 py-3">
-  <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-  </div>
+  <footer>
+    <div class="footer-inner">
   
-  <div class="statistics">
-    
-    
-
-    
-      
-        <!-- LeanCloud 统计PV -->
-        <span id="leancloud-site-pv-container" style="display: none">
-            总访问量 
-            <span id="leancloud-site-pv"></span>
-             次
-          </span>
-      
-      
-        <!-- LeanCloud 统计UV -->
-        <span id="leancloud-site-uv-container" style="display: none">
-            总访客数 
-            <span id="leancloud-site-uv"></span>
-             人
-          </span>
-      
-
-    
-  </div>
-
-
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
   
-
   
-</footer>
-
-
-  <!-- SCRIPTS -->
   
-  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -965,55 +575,23 @@ public void init()
   </script>
 
 
-<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
-<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-<!-- Plugins -->
 
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-  
-
-
-
-  
-    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
-  
-  
-    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
-  
-  
-    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
-  
-  
-    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
-  
-
-
-
-
-  <script defer src="/js/leancloud.js" ></script>
-
-
-
-  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;
-      var title = document.getElementById('subtitle').title;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
       
-      typing(title)
+        typing(text);
       
     })(window, document);
   </script>
@@ -1023,31 +601,159 @@ public void init()
 
 
 
-
-
-
-
-
-
   
-
-  
-
-  
-
-  
-
-  
-
+    <script  src="/js/img-lazyload.js" ></script>
   
 
 
 
 
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
 
-<!-- 主题的启动项 保持在最底部 -->
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
 <script  src="/js/boot.js" ></script>
 
 
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
 </body>
 </html>
