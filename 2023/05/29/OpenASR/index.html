@@ -16,22 +16,22 @@
   <meta name="author" content="feeling-cold">
   <meta name="keywords" content="">
   
-    <meta name="description" content="When I was learning Scala recently, my teacher left me a question to write down the following ideas Topic message: There are 100 people in a circle, numbered in order. Count off from the first person">
+    <meta name="description" content="This project is an education-oriented idiom recognition system, aiming at enabling idiom recognition direction through speech recognition technology. The key points of this project are low-resource ar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Joseph Ring">
-<meta property="og:url" content="http://example.com/2022/03/21/Joseph-Ring/index.html">
+<meta property="og:title" content="OpenASR-CNidiom">
+<meta property="og:url" content="http://example.com/2023/05/29/OpenASR/index.html">
 <meta property="og:site_name" content="feeling-cold">
-<meta property="og:description" content="When I was learning Scala recently, my teacher left me a question to write down the following ideas Topic message: There are 100 people in a circle, numbered in order. Count off from the first person">
+<meta property="og:description" content="This project is an education-oriented idiom recognition system, aiming at enabling idiom recognition direction through speech recognition technology. The key points of this project are low-resource ar">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-21T10:55:07.000Z">
-<meta property="article:modified_time" content="2022-03-21T11:25:39.172Z">
+<meta property="article:published_time" content="2023-05-29T11:34:12.000Z">
+<meta property="article:modified_time" content="2023-05-29T11:42:57.996Z">
 <meta property="article:author" content="feeling-cold">
 <meta property="article:tag" content="originate">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Joseph Ring - feeling-cold</title>
+  <title>OpenASR-CNidiom - feeling-cold</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,7 +194,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Joseph Ring"></span>
+            <span id="subtitle" data-typed-text="OpenASR-CNidiom"></span>
           
         </div>
 
@@ -205,8 +205,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-21 18:55" pubdate>
-          March 21, 2022 pm
+        <time datetime="2023-05-29 19:34" pubdate>
+          May 29, 2023 pm
         </time>
       </span>
     
@@ -274,23 +274,19 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Joseph Ring</h1>
+            <h1 style="display: none">OpenASR-CNidiom</h1>
             
             <div class="markdown-body">
               
-              <p>When I was learning Scala recently, my teacher left me a question to write down the following ideas</p>
-<p>Topic message:</p>
-<p>There are 100 people in a circle, numbered in order. Count off from the first person (counting from 1 to 3). If the person reporting for 3 leaves the circle, ask who was left last.</p>
-<p>Answer:</p>
-<p>You start by simply saying 100 is an array, and then you delete multiples of 3, and then you iterate, and then you’re left with exactly what they want</p>
-<p>The following code</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">list</span> = []<br>index = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span> (<span class="hljs-number">0</span>,<span class="hljs-number">100</span>):<br>    <span class="hljs-built_in">list</span>.append(i)<br><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(<span class="hljs-built_in">list</span>)):<br>    <span class="hljs-keyword">if</span> i %<span class="hljs-number">3</span> == <span class="hljs-number">2</span>:<br>        <span class="hljs-comment">#print(i)</span><br>        index.append(i)<br>onelist = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">list</span> <span class="hljs-keyword">if</span> i <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> index]<br>index = []<br><span class="hljs-built_in">print</span>(onelist)<br><br><span class="hljs-keyword">while</span> <span class="hljs-built_in">len</span>(onelist) &gt; <span class="hljs-number">2</span>:<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(onelist)):<br>        <span class="hljs-keyword">if</span> i %<span class="hljs-number">3</span> == <span class="hljs-number">2</span>:<br>            <span class="hljs-comment">#print(i)</span><br>            index.append(onelist[i])<br>    <span class="hljs-comment">#print(index)</span><br>    onelist = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> onelist <span class="hljs-keyword">if</span> i <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> index]<br>    <span class="hljs-built_in">print</span>(onelist)<br></code></pre></td></tr></table></figure>
-
-<p>Such results is the remaining two, respectively, for the first and second, the problem must be wrong, if according to this algorithm, no matter what happens, the first person and second person always can’t count to three, so back to the topic, turned out to be forgotten city circle, a circle represents the last man after the number, the first people to continue to the last man to count off.</p>
-<p>So to adjust our thinking, we set a zero for 100 people, and then the people who count to three will be marked as one, and then the people who are left with a zero will be the people left. Thinking that how to realize the specific algorithm, first of all set a total length of 100 0 array as a marker of 100 people, at the same time, set the number off the starting position to 0, when the number off position 0, began to count off 1, until the number off for 3, tag into 1, then the starting position in time becomes zero, the total number of minus one, start the second number off 1 at the same time, Then loop through the above process, when the starting position reaches the length of the array, it represents the beginning of a new loop.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python">index = [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]*<span class="hljs-number">10</span><br><span class="hljs-built_in">print</span>(index)<br><br>long = <span class="hljs-number">100</span><br>person = <span class="hljs-number">0</span><br>location = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">while</span> long &gt; <span class="hljs-number">1</span>:<br><br>        <span class="hljs-keyword">if</span> index[location] == <span class="hljs-number">0</span>:<br>            person += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> person == <span class="hljs-number">3</span>:<br>                person = <span class="hljs-number">0</span><br>                index[location] = <span class="hljs-number">1</span><br>                long -= <span class="hljs-number">1</span><br><br>            location += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> (location == <span class="hljs-built_in">len</span>(index)):<br>                location = <span class="hljs-number">0</span><br><br>        <span class="hljs-keyword">else</span>:<br>            location += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> location == <span class="hljs-built_in">len</span>(index):<br>                location = <span class="hljs-number">0</span><br><br><span class="hljs-built_in">print</span>(index)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-built_in">len</span>(index)):<br>    <span class="hljs-keyword">if</span> index[i] == <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>(i+<span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure>
-
-<p>Then the code is written in Python, not in Scala, and will be written in Scala again after you are familiar with Scala.</p>
+              <p>This project is an education-oriented idiom recognition system, aiming at enabling idiom recognition direction through speech recognition technology. The key points of this project are low-resource artificial intelligence-speech recognition direction, data matching algorithm, and software engineering construction mode.</p>
+<p>This project detailed code address: <a target="_blank" rel="noopener" href="https://gitee.com/feeling-cool/Idiomrecognition">https://gitee.com/feeling-cool/Idiomrecognition</a></p>
+<p>Hope you can star! If you have any questions, please  send me an email. I’ll respond when I see it.</p>
+<p>At present, our articles related to the project are in the state of repair and submission, and the specific papers will be published after receiving.</p>
+<p>This project has developed a new recognition system for Chinese idioms for the benefit of speech recognition technology. The system is named OpenASR-CNidiom, which uses the acoustic model of the open source automatic Chinese speech recognition framework ASRT. We use three data retrieval algorithms to identify idioms. At the same time, the classical DTW algorithm of speech recognition is included in OpenASR-CNidiom for parallel prediction, so that openASR-CNidiom can achieve high recognition accuracy compared with the native ASRT.</p>
+<p>OpenASR-CNidiom will use the acoustic model of the open source framework ASRT to predict sound sequences (idioms and pinyin sequences) when the identification begins after the input of the audio file. The pinyin sequence is given to the three data retrieval algorithms proposed in this paper, and the closest answer selected by the algorithm from the database is returned to the user. After that, identifying the correct speech sequence can be used as an audio template by the DTW algorithm, allowing the DTW algorithm to be selected for prediction the next time the same idiom is recognized.</p>
+<p>We provided 100 audio files to test the accuracy of openASR-CNidiom. OpenASR-CNidiom achieves up to 88% accuracy, compared to the 8% accuracy of the open source framework ASRT. Collocation algorithm 1 FQ algorithm can achieve 48% accuracy collocation algorithm 2 SFQ algorithm can achieve 51% accuracy collocation algorithm 3 DFQ algorithm can achieve 88% accuracy</p>
+<p>Usage of this project: Install the required library, set up the data table according to the data table in the SQL file, and insert the sql file in the Chinese idiom folder into the table. Then run GUI.py directly. Project Function Click the GUI button, according to the button to identify idioms and other operations.</p>
+<p>I will continue to update the specific documents later.</p>
 
               
             </div>
@@ -308,7 +304,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/algorithm/" class="category-chain-item">algorithm</a>
+  <a href="/categories/AI-SR-software-datamatch/" class="category-chain-item">AI-SR software datamatch</a>
   
   
 
@@ -335,8 +331,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Joseph Ring</div>
-      <div>http://example.com/2022/03/21/Joseph-Ring/</div>
+      <div>OpenASR-CNidiom</div>
+      <div>http://example.com/2023/05/29/OpenASR/</div>
     </div>
     <div class="license-meta">
       
@@ -348,7 +344,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 21, 2022</div>
+          <div>May 29, 2023</div>
         </div>
       
       
@@ -378,18 +374,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/12/26/thought/" title="thought">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">thought</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/16/VLPR/" title="VLPR">
-                        <span class="hidden-mobile">VLPR</span>
+                      <a href="/2022/12/26/thought/" title="thought">
+                        <span class="hidden-mobile">thought</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>OpenASR-CNidiom</title>
+    <link href="/2023/05/29/OpenASR/"/>
+    <url>/2023/05/29/OpenASR/</url>
+    
+    <content type="html"><![CDATA[<p>This project is an education-oriented idiom recognition system, aiming at enabling idiom recognition direction through speech recognition technology. The key points of this project are low-resource artificial intelligence-speech recognition direction, data matching algorithm, and software engineering construction mode.</p><p>This project detailed code address: <a href="https://gitee.com/feeling-cool/Idiomrecognition">https://gitee.com/feeling-cool/Idiomrecognition</a></p><p>Hope you can star! If you have any questions, please  send me an email. I’ll respond when I see it.</p><p>At present, our articles related to the project are in the state of repair and submission, and the specific papers will be published after receiving.</p><p>This project has developed a new recognition system for Chinese idioms for the benefit of speech recognition technology. The system is named OpenASR-CNidiom, which uses the acoustic model of the open source automatic Chinese speech recognition framework ASRT. We use three data retrieval algorithms to identify idioms. At the same time, the classical DTW algorithm of speech recognition is included in OpenASR-CNidiom for parallel prediction, so that openASR-CNidiom can achieve high recognition accuracy compared with the native ASRT.</p><p>OpenASR-CNidiom will use the acoustic model of the open source framework ASRT to predict sound sequences (idioms and pinyin sequences) when the identification begins after the input of the audio file. The pinyin sequence is given to the three data retrieval algorithms proposed in this paper, and the closest answer selected by the algorithm from the database is returned to the user. After that, identifying the correct speech sequence can be used as an audio template by the DTW algorithm, allowing the DTW algorithm to be selected for prediction the next time the same idiom is recognized.</p><p>We provided 100 audio files to test the accuracy of openASR-CNidiom. OpenASR-CNidiom achieves up to 88% accuracy, compared to the 8% accuracy of the open source framework ASRT. Collocation algorithm 1 FQ algorithm can achieve 48% accuracy collocation algorithm 2 SFQ algorithm can achieve 51% accuracy collocation algorithm 3 DFQ algorithm can achieve 88% accuracy</p><p>Usage of this project: Install the required library, set up the data table according to the data table in the SQL file, and insert the sql file in the Chinese idiom folder into the table. Then run GUI.py directly. Project Function Click the GUI button, according to the button to identify idioms and other operations.</p><p>I will continue to update the specific documents later.</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>AI-SR software datamatch</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>originate</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>thought</title>
     <link href="/2022/12/26/thought/"/>
     <url>/2022/12/26/thought/</url>
@@ -102,7 +127,7 @@
     <link href="/2021/10/06/hadoop/"/>
     <url>/2021/10/06/hadoop/</url>
     
-    <content type="html"><![CDATA[<p>After a few days,i finally finished my homework about the data class.the work is aimed at installing the environment of hadoop on linux,it looks so easy , but there are so many error when i do my work ,so i write down my experience in this blog. first, my linux environment is 32-bit centos 6.7 ,after add the user and configure the ssh. i start to install jdk1.7 for os,hadoop need the jdk,when i use the yum which the tools was used to install some software to install jdk,it occured the fist problem,through the internet,the problem is the source of yum , the yum need to change the source of aliyun , you need use the code berfore to change the source<br>then you can install jdk ffor your linux successfully.then you can install hadoop,i have a suggesstion about the hadoop version 2.x is a good choice, at first,using the hadoop 3.x led the unmatch of java version and hadoop version,if you already use the 3.x ,just go on,if you can not check the hadoop version in your computer,if you are a novice in linux, you had better to change a new virtual machine ,choose the  hadoop 2.x and then repeat the process that you had done before,but i never install the jdk1.8 and then install the hadoop 3.x,so you can try it.<br>if you can install the hadoop sucessfully,then you just need a ide to write code and then use java API and hadoop to interact , you can choose the intellijidea and eclipse , i choose the eclipse as my ide,after installing the ide,it semms that it&#96;s almost over,then it occuered a inexplicable problem , when i use eclipse to open a file ,the eclipse flashback crazily.use the almost idea in internet,the problem can not be solved,when i change the ide ,another ide can not launch because the linux lack the realpath tools,when i search how to install realpath in linux,there are not a way can help me ,so i decide to change the linux from centos to ubuntu ,and repeat the process above all.<br>when i use the ubuntu to install hadoop,there is no any serious problem,just one point,we need to allocate a little more memory to the ubuntu,because the eclipse need more memeory.<br>if you have some question,you can email me(<a href="mailto:&#x32;&#52;&#x38;&#x39;&#x33;&#x32;&#x31;&#x37;&#x31;&#51;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#109;">&#x32;&#52;&#x38;&#x39;&#x33;&#x32;&#x31;&#x37;&#x31;&#51;&#64;&#113;&#x71;&#x2e;&#99;&#111;&#109;</a>).</p>]]></content>
+    <content type="html"><![CDATA[<p>After a few days,i finally finished my homework about the data class.the work is aimed at installing the environment of hadoop on linux,it looks so easy , but there are so many error when i do my work ,so i write down my experience in this blog. first, my linux environment is 32-bit centos 6.7 ,after add the user and configure the ssh. i start to install jdk1.7 for os,hadoop need the jdk,when i use the yum which the tools was used to install some software to install jdk,it occured the fist problem,through the internet,the problem is the source of yum , the yum need to change the source of aliyun , you need use the code berfore to change the source<br>then you can install jdk ffor your linux successfully.then you can install hadoop,i have a suggesstion about the hadoop version 2.x is a good choice, at first,using the hadoop 3.x led the unmatch of java version and hadoop version,if you already use the 3.x ,just go on,if you can not check the hadoop version in your computer,if you are a novice in linux, you had better to change a new virtual machine ,choose the  hadoop 2.x and then repeat the process that you had done before,but i never install the jdk1.8 and then install the hadoop 3.x,so you can try it.<br>if you can install the hadoop sucessfully,then you just need a ide to write code and then use java API and hadoop to interact , you can choose the intellijidea and eclipse , i choose the eclipse as my ide,after installing the ide,it semms that it&#96;s almost over,then it occuered a inexplicable problem , when i use eclipse to open a file ,the eclipse flashback crazily.use the almost idea in internet,the problem can not be solved,when i change the ide ,another ide can not launch because the linux lack the realpath tools,when i search how to install realpath in linux,there are not a way can help me ,so i decide to change the linux from centos to ubuntu ,and repeat the process above all.<br>when i use the ubuntu to install hadoop,there is no any serious problem,just one point,we need to allocate a little more memory to the ubuntu,because the eclipse need more memeory.<br>if you have some question,you can email me(<a href="mailto:&#50;&#52;&#56;&#x39;&#51;&#x32;&#49;&#55;&#x31;&#x33;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#50;&#52;&#56;&#x39;&#51;&#x32;&#49;&#55;&#x31;&#x33;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a>).</p>]]></content>
     
     
     <categories>
